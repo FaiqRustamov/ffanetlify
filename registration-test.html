@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="keywords" content="America,Azerbaijan">
+<meta name="description" content="The Federation of Azerbaijani Americans">
+<title>The Federation of Azerbaijani Americans</title>
+<link rel="icon" href="./assets/images/logo.png" type="image/gif" sizes="16x16">
+<!-- Bootstrap css link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<!-- Google Fonts link -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<!--Font awesome link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+ <!-- Own css link -->
+ <link rel="stylesheet" href="./assets/css/registration.css">
+ <style>
+
+  </style>
+<body>
+    <div class="container-fluid">
+<div class="row">
+<div style="background-color: white;" class="left col-md-6">
+      <img  src="./assets/images/logo.png" alt="Logo">
+    <form class="needs-validation" novalidate id="regForm" action="">
+        <h1 class="content-head"> <b> Registration Form </b></h1>
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">
+            
+          <p><input  class="form-elements" placeholder="Name and Surname"  oninput="this.className = ''" name="fname">
+          <div>
+
+          </div></p>
+          
+          <p><input class=" form-elements" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" type="date" value="Date of Birth"  id="date" oninput="this.className = ''" name="dd">
+            <div></div>
+          </p>
+          
+          <p><input  class="form-elements" placeholder="Citizenship" oninput="this.className = ''" name="citizen"> 
+            <div class="invalid-feedback" id="invalid-feedback">
+           
+            </div>
+          </p>
+           
+          <p><input  class="form-elements" placeholder="Education" oninput="this.className = ''" name="edu"> 
+             <!-- <div class="invalid-feedback">
+            your email adress in invalid          </div></p> -->
+          <p><input  class="form-elements" placeholder="Current employer and Position" oninput="this.className = ''" name="employe"> 
+             <!-- <div class="invalid-feedback">
+            your email adress in invalid          </div></p> -->
+          </p>
+        </div>
+        <div class="tab ">
+          <p><input  class="form-elements" placeholder="Permament/Mailing adress" oninput="this.className = ''" name="permament"></p>
+          <p><input  class="form-elements" placeholder="Phone Number" oninput="this.className = ''" name="phone"></p>
+          <p><input  class="form-elements" placeholder="E-mail address" oninput="this.className = ''" name="email"></p>
+          <p><input  class="form-elements" placeholder="Member of other NGOs or Associations" oninput="this.className = ''" name="member"></p>
+          <p><input  class="form-elements" placeholder="The year you move to USA" oninput="this.className = ''" name="year"></p>
+
+        </div>
+        <div class="tab ">
+          <p><textarea  placeholder="Please mention the reasons why you wish to join FAA and your expectation from organization" class="form-elements" name="" id="" oninput="this.className = ''" cols="63" rows="7" required></textarea></p>
+          <p><textarea  placeholder="Please mention the way you are willing to contribute with FAA" class="form-elements" name="" id=""  oninput="this.className = ''"  cols="70" rows="7" required></textarea></p>
+        </div>
+   
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue</button>
+        <div style="margin-top:30px; color:#3C50E0; margin-bottom:20px;">
+          <a href="./index.html"> <b>Back </b> </a>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;">
+          <span class="step1"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </form>
+</div>
+<div  class="right col-md-6">
+  <img style="width: 100%; height: 100%; "  src="./assets/images/Mask Group (1).png"  alt="">
+  </div>
+</div>
+    </div>
+
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('nextPrev(1)', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+</script>
+
+  <!--Bootstrap  JavaScript link-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"></script>
+  <!-- Own Javascript link -->
+<script src="./assets/js/test.js"></script>
+
+</body>
+</html>
+
+
+<!-- oninput="this.className = ''" -->
